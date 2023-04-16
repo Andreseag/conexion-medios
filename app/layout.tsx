@@ -1,3 +1,5 @@
+import './globals.css';
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +7,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+      </head>
+      <body>
+        <div className="building-view">
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
