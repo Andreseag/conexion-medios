@@ -1,6 +1,6 @@
 function FormFifaContest() {
   return (
-    <div className='FormFifaContest mx-6'>
+    <div className='FormFifaContest mx-6 mt-6'>
       <div className="FormFifaContest__header mb-4">
         <h3 className="text-2xl text-slate-800 font-bold text-center">!Agrega los datos de inscripción¡</h3>
         <p className="text-center text-slate-600">Debes agregar tu información para ser parte del tornero de FIFA y ganar hasta <span className="font-bold text-red-500">$1.200.000</span></p>
