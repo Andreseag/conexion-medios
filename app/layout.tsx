@@ -1,4 +1,5 @@
 import './globals.css';
+import Header from './header/page';
 
 export default function RootLayout({
   children,
@@ -9,6 +10,7 @@ export default function RootLayout({
     <html lang="es">
       <body>
         <div className="building-view">
+          <Header />
           {children}
         </div>
       </body>
