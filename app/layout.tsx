@@ -1,4 +1,5 @@
 import './globals.css';
+import Header from './header/page';
 
 export default function RootLayout({
   children,
@@ -6,12 +7,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-      </head>
+    <html lang="es">
       <body>
         <div className="building-view">
+          <Header />
           {children}
         </div>
       </body>
