@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ConexionLogo from "../public/logo-l.png";
+import BuildingView from "@/components/BuildingView/BuildingView";
 
 export default function Home() {
   return (
