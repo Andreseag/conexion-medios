@@ -1,11 +1,11 @@
-import FormFifaContest from "@/components/FormFifaContest/FormFifaContest"
+import FormFifaContest from "@/components/FormFifaContest/FormFifaContest";
 
 function Fifa() {
   return (
     <>
       <FormFifaContest />
     </>
-  )
+  );
 }
 
-export default Fifa
+export default Fifa;

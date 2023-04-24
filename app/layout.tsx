@@ -1,19 +1,20 @@
-import './globals.css';
-import Header from './header/page';
+import "./globals.css";
+import Header from "./header/page";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </head>
       <body>
-        <div className="building-view">
-          <Header />
-          {children}
-        </div>
+        <Header />
+        <div className="building-view">{children}</div>
       </body>
     </html>
-  )
+  );
 }

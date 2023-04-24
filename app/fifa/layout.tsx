@@ -1,13 +1,11 @@
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <>
-      <div className="fifa-view">
-        {children}
-      </div>
+      <div className="fifa-view">{children}</div>
     </>
-  )
+  );
 }
