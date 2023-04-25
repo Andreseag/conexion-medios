@@ -1,0 +1,14 @@
+.FormFifaContest {
+  &__form {
+    .form-group {
+      label {
+        @apply text-slate-600;
+      }
+      input {
+        @apply text-slate-800;
+      }
+
+      @apply mb-4;
+    }
+  }
+}
