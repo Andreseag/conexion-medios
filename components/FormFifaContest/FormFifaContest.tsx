@@ -1,4 +1,8 @@
+import { useEffect } from "react";
 import "./FormFifaContest.scss";
+import { PickerDropPane } from "filestack-react";
+
+const YOUR_API_KEY = "A4rzxhybTwSR4XGdZmuoQz";
 // import { useState } from "react";
 
 // interface FormValues {
@@ -32,6 +36,12 @@ function FormFifaContest() {
   //   "payment-reference": "",
   // });
 
+  const showFileStackInput = () => {
+    const YOUR_API_KEY = "A4rzxhybTwSR4XGdZmuoQz";
+    const client = (window as any).filestack.init(YOUR_API_KEY);
+    client.picker().open();
+  };
+
   const sendForm = async (event: any) => {
     event.preventDefault();
     const API = "https://sheetdb.io/api/v1/vn9sgxcek470x";
@@ -51,8 +61,12 @@ function FormFifaContest() {
     // const result = await response.json();
   };
 
+  // useEffect(() => {
+  //   showFileStackInput();
+  // }, []);
+
   return (
-    <div className="FormFifaContest mx-2 md:mx-6 mt-12 max-w-2xl">
+    <div className="FormFifaContest mx-2 md:mx-6 mt-6 md:mt-12 max-w-2xl">
       <div className="FormFifaContest__header mb-8 text-center">
         <h3 className="text-2xl mb-3 text-slate-800 font-bold text-center">
           !Agrega los datos de inscripción¡
@@ -64,7 +78,7 @@ function FormFifaContest() {
       </div>
       <form
         className="FormFifaContest__form"
-        id="sheetdb-form"
+        id="inscription-fifa-form"
         onSubmit={sendForm}
       >
         <div className="form-group flex flex-col mb-2">
@@ -199,13 +213,20 @@ function FormFifaContest() {
           <label className="text-sm" htmlFor="shirt-size">
             Talla de camiseta
           </label>
-          <input
+          <select
             className="border rounded h-9 px-2"
             name="data[shirt-size]"
             id="shirt-size"
-            type="text"
             required
-          />
+          >
+            <option value="">Selecciona una opción</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </select>
         </div>
         <div className="form-group flex flex-col mb-2">
           <label className="text-sm" htmlFor="fifa-team">
@@ -231,15 +252,31 @@ function FormFifaContest() {
             required
           />
         </div>
+        <div className="form-group flex flex-col mb-2">
+          <label className="text-sm" htmlFor="payment-reference">
+            Imagen de soporte de pago
+          </label>
+          <div className="cursor-pointer">
+            <PickerDropPane
+              apikey={YOUR_API_KEY}
+              onSuccess={(res: any) => console.log(res)}
+              onUploadDone={(res: any) => console.log(res)}
+            />
+          </div>
+        </div>
+
         <a
           className="block text-sm text-slate-800 hover:text-slate-500 mb-4 underline font-medium hover:underline"
-          href=""
+          href="https://drive.google.com/file/d/1ZqsuM4bmuf5SP6uYzRP7HUaGX6Q5DVrd/view?usp=sharing"
           target="_blank"
         >
           Descargar reglamento del torneo
         </a>
         {/* <input type="submit" value="Incribirme" /> */}
-        <button className="w-full h-11 bg-red-500 hover:bg-red-600 text-white">
+        <button
+          form="inscription-fifa-form"
+          className="w-full h-11 bg-red-500 hover:bg-red-600 text-white"
+        >
           Incribirme
         </button>
       </form>
