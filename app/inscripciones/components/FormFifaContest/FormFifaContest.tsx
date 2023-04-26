@@ -1,47 +1,21 @@
 import { useEffect, useState } from "react";
 import "./FormFifaContest.scss";
-const YOUR_API_KEY = "A4rzxhybTwSR4XGdZmuoQz";
-
-// interface FormValues {
-//   name: string;
-//   sex: string;
-//   email: string;
-//   document: string;
-//   "document-number": string;
-//   "phone-number": string;
-//   "whatsapp-phone": string;
-//   address: string;
-//   city: string;
-//   "shirt-size": string;
-//   "fifa-team": string;
-//   "payment-reference": string;
-// }
+import { InscriptionRegister } from "../../models";
+const FILE_STACK_API_KEY = "A4rzxhybTwSR4XGdZmuoQz";
 
 interface Props {
   setIsInscribed: React.Dispatch<React.SetStateAction<boolean>>;
+  setInscriptionData: React.Dispatch<React.SetStateAction<InscriptionRegister>>;
 }
 
-function FormFifaContest({ setIsInscribed }: Props) {
-  // const [formValues, setFormValues] = useState<FormValues>({
-  //   name: "",
-  //   sex: "",
-  //   email: "",
-  //   document: "",
-  //   "document-number": "",
-  //   "phone-number": "",
-  //   "whatsapp-phone": "",
-  //   address: "",
-  //   city: "",
-  //   "shirt-size": "",
-  //   "fifa-team": "",
-  //   "payment-reference": "",
-  // });
-
+function FormFifaContest({ setIsInscribed, setInscriptionData }: Props) {
   const sendForm = async (event: any) => {
     event.preventDefault();
     const API = "https://sheetdb.io/api/v1/vn9sgxcek470x";
     const data = new FormData(event.target);
     data.append("data[numero-registro]", `${inscriptionCodeGenerator()}`);
+    const email: string = data.get("data[email]") as string;
+    const code: string = data.get("data[numero-registro]") as string;
 
     fetch(API, {
       method: "POST",
@@ -54,7 +28,15 @@ function FormFifaContest({ setIsInscribed }: Props) {
         ) as HTMLFormElement;
         formDOMElement?.reset();
         setIsInscribed(true);
+        setInscriptionData({
+          email,
+          code,
+        });
       });
+  };
+
+  const sendInscriptionFile = () => {
+    const client = (window as any).filestack.init(FILE_STACK_API_KEY);
   };
 
   const inscriptionCodeGenerator = (): number => {
