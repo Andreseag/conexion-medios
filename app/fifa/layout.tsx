@@ -5,7 +5,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <div className="fifa-view">{children}</div>
+      <div className="fifa-view flex justify-center mb-6">{children}</div>
     </>
   );
 }

@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["BDPBIRGULA"],
+        // sans: ["BDPBIRGULA"],
         // birgula: ["BDPBIRGULA", "sans-serif"],
       },
     },

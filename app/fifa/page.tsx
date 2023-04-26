@@ -1,3 +1,4 @@
+"use client";
 import FormFifaContest from "@/components/FormFifaContest/FormFifaContest";
 
 function Fifa() {
