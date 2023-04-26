@@ -17,7 +17,11 @@ const YOUR_API_KEY = "A4rzxhybTwSR4XGdZmuoQz";
 //   "payment-reference": string;
 // }
 
-function FormFifaContest() {
+interface Props {
+  setIsInscribed: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function FormFifaContest({ setIsInscribed }: Props) {
   // const [formValues, setFormValues] = useState<FormValues>({
   //   name: "",
   //   sex: "",
@@ -33,12 +37,11 @@ function FormFifaContest() {
   //   "payment-reference": "",
   // });
 
-  const [isMount, setMount] = useState<boolean>(false);
-
   const sendForm = async (event: any) => {
     event.preventDefault();
     const API = "https://sheetdb.io/api/v1/vn9sgxcek470x";
     const data = new FormData(event.target);
+    data.append("data[numero-registro]", `${inscriptionCodeGenerator()}`);
 
     fetch(API, {
       method: "POST",
@@ -47,15 +50,27 @@ function FormFifaContest() {
       .then((response) => response.json())
       .then(() => {
         const formDOMElement: HTMLFormElement | null = document.getElementById(
-          "sheetdb-form"
+          "inscription-fifa-form"
         ) as HTMLFormElement;
         formDOMElement?.reset();
+        setIsInscribed(true);
       });
   };
 
-  useEffect(() => {
-    setMount(true);
-  }, []);
+  const inscriptionCodeGenerator = (): number => {
+    const min: number = 1000;
+    const max: number = 9999;
+    const floatRandom: number = Math.random();
+
+    const difference: number = max - min;
+
+    // random between 0 and the difference
+    const random: number = Math.round(difference * floatRandom);
+
+    const randomWithinRange: number = random + min;
+
+    return randomWithinRange;
+  };
 
   return (
     <div className="FormFifaContest mx-2 md:mx-6 mt-6 md:mt-12 max-w-2xl">
