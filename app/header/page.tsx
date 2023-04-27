@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="header shadow-lg">
       <div className="header__container h-12 flex items-center justify-center">
-        <Image src={ConexionLogo} alt="Picture of the author" width="110" />
+        <Image src={ConexionLogo} alt="Conexión Medios" width="110" />
       </div>
     </header>
   );

@@ -4,7 +4,7 @@ import ConexionLogo from "../../public/logo-l.png";
 function BuildingView() {
   return (
     <div className="flex flex-col items-center">
-      <Image src={ConexionLogo} alt="Picture of the author" width="600" />
+      <Image src={ConexionLogo} alt="Conexión Medios" width="600" />
       <svg
         fill="none"
         className="w-16 h-16 animate-spin fill-red-500"
