@@ -15,7 +15,7 @@ function Fifa() {
 
   return (
     <>
-      {!isInscribedPending && !isInscribedPending && (
+      {!isInscribedPending && !isInscribedSuccess && (
         <FormFifaContest
           setIsInscribedSuccess={setIsInscribedSuccess}
           setInscriptionData={setInscriptionData}
