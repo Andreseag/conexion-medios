@@ -14,6 +14,7 @@ module.exports = {
         // sans: ["BDPBIRGULA"],
         // birgula: ["BDPBIRGULA", "sans-serif"],
       },
+      opacity: ["disabled"],
     },
   },
   plugins: [],
