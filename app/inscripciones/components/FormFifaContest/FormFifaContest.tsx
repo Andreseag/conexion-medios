@@ -111,12 +111,8 @@ function FormFifaContest({
     return randomWithinRange;
   };
 
-  // useEffect(() => {
-  //   showFileStackInput();
-  // }, []);
-
   return (
-    <div className="FormFifaContest mx-2 md:mx-6 mt-6">
+    <div className="FormFifaContest mx-3 md:mx-6 mt-6">
       <div className="FormFifaContest__header mb-8 text-center">
         <h3 className="text-2xl mb-3 text-slate-800 font-bold text-center">
           !Agrega los datos de inscripción¡
