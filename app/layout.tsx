@@ -10,7 +10,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="/favicon.ico" />
-        <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+        <script
+          src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"
+          defer
+        ></script>
       </head>
       <body>
         <Header />
