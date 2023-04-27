@@ -330,13 +330,13 @@ function FormFifaContest({
           </div>
           <input type="file" onChange={handleFileChange} />
         </div>
-        <a
+        {/* <a
           className="block text-sm text-slate-800 hover:text-slate-500 mb-4 underline font-medium hover:underline"
           href="https://drive.google.com/file/d/1ZqsuM4bmuf5SP6uYzRP7HUaGX6Q5DVrd/view?usp=sharing"
           target="_blank"
         >
           Descargar reglamento del torneo
-        </a>
+        </a> */}
         <button
           form="inscription-fifa-form"
           className={classnames(
