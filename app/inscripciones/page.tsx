@@ -3,9 +3,11 @@ import FormFifaContest from "@/app/inscripciones/components/FormFifaContest/Form
 import { useState } from "react";
 import InscriptionSuccess from "./components/InscriptionSuccess/InscriptionSuccess";
 import { InscriptionRegister } from "./models";
+import InscriptionPending from "./components/InscriptionPending/InscriptionPending";
 
 function Fifa() {
-  const [isInscribed, setIsInscribed] = useState<boolean>(false);
+  const [isInscribedSuccess, setIsInscribedSuccess] = useState<boolean>(false);
+  const [isInscribedPending, setIsInscribedPending] = useState<boolean>(false);
   const [inscriptionData, setInscriptionData] = useState<InscriptionRegister>({
     email: "",
     code: "",
@@ -13,13 +15,16 @@ function Fifa() {
 
   return (
     <>
-      {isInscribed ? (
-        <InscriptionSuccess inscriptionData={inscriptionData} />
-      ) : (
+      {!isInscribedPending && !isInscribedPending && (
         <FormFifaContest
-          setIsInscribed={setIsInscribed}
+          setIsInscribedSuccess={setIsInscribedSuccess}
           setInscriptionData={setInscriptionData}
+          setIsInscribedPending={setIsInscribedPending}
         />
+      )}
+      {isInscribedPending && <InscriptionPending />}
+      {isInscribedSuccess && (
+        <InscriptionSuccess inscriptionData={inscriptionData} />
       )}
     </>
   );
