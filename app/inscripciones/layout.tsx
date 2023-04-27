@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Conexión medios | Inscripciones",
+};
+
 export default function RootLayout({
   children,
 }: {
