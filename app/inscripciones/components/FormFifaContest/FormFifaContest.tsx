@@ -34,6 +34,12 @@ function FormFifaContest({
     return data;
   };
 
+  const showFileStackInput = () => {
+    const YOUR_API_KEY = "A4rzxhybTwSR4XGdZmuoQz";
+    const client = (window as any).filestack.init(YOUR_API_KEY);
+    client.picker().open();
+  };
+
   const sendForm = async (event: any) => {
     event.preventDefault();
     const data = new FormData(event.target);
@@ -104,6 +110,10 @@ function FormFifaContest({
 
     return randomWithinRange;
   };
+
+  // useEffect(() => {
+  //   showFileStackInput();
+  // }, []);
 
   return (
     <div className="FormFifaContest mx-2 md:mx-6 mt-6">
