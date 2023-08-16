@@ -16,4 +16,9 @@
   html {
     /* font-family: galderglynn, system-ui, sans-serif; */
   }
+
+  h1, p {
+    @apply text-slate-800
+  }
+  
 }
