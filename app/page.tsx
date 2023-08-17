@@ -1,7 +1,7 @@
 import Image from "next/image";
-
 import newsData from "@/app/data/news.data";
 import Link from "next/link";
+import Carousel from "@/components/Carousel/Carousel";
 
 export const metadata = {
   title: "Conexión medios",
@@ -20,12 +20,15 @@ export default function Home() {
     <>
       <div className="home flex flex-col items-center">
         <div className="home__container w-11/12 md:w-4/5 lg:w-2/3">
+          {/* Carousel */}
+          <Carousel />
+
           {/* Hero */}
           {heroNew && (
             <Link href={`/noticias/${heroNew.id}`}>
               <div className="home__hero mt-10 flex flex-col md:flex-row gap-4 border-b border-gray-400">
                 <div className="hero__description">
-                  <h1 className="text-left text-3xl font-semibold text-slate-800">
+                  <h1 className="text-left text-2xl font-semibold text-slate-800">
                     {heroNew.title}
                   </h1>
                   <p className="text-sm mt-2 italic font-normal text-slate-600">
@@ -41,7 +44,7 @@ export default function Home() {
                     src={heroNew.image}
                     width={1200}
                     height={1200}
-                    className="mb-10"
+                    className="mb-10 object-cover h-72 md:h-96"
                   />
                 </div>
               </div>
@@ -55,10 +58,13 @@ export default function Home() {
                 .filter((item) => item.id != parseInt("33"))
                 .map((newItem, i) => (
                   <Link key={i} href={`/noticias/${newItem.id}`}>
-                    <div key={i} className="new-card flex gap-1 md:gap-2">
-                      <div className="new-card__content">
+                    <div
+                      key={i}
+                      className="new-card w-full flex gap-1 md:gap-2"
+                    >
+                      <div className="new-card__content w-1/2">
                         <div className="new-card__title">
-                          <h3 className="text-left text-xl  font-semibold text-slate-800 mb-4">
+                          <h3 className="text-left text-xl font-semibold text-slate-800 mb-4">
                             {newItem.title}
                           </h3>
                           <p className="font-normal text-slate-600">
@@ -66,12 +72,13 @@ export default function Home() {
                           </p>
                         </div>
                       </div>
-                      <div className="new-card__image">
+                      <div className="new-card__image w-1/2">
                         <Image
                           alt="Imagen de la noticia"
                           src={newItem.image}
                           width={1200}
                           height={1200}
+                          className="object-cover h-44 "
                         />
                       </div>
                     </div>
