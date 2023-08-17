@@ -1,5 +1,28 @@
 const newsData = [
   {
+    id: 38,
+    title: "NO HABRÁ ZONA VIP EN EL FESTIVAL NACIONAL DE COLONIAS 2023",
+    description:
+      "En entrevista con Conexión Medios, Nora Carranza presidente de la Corporación Nacional de Colonias, anunció que para la edición XXXI del Festival Nacional de Colonias no habrá zona VIP, además invitó a las personas a participar de manera respetuosa y responsable.",
+    date: "17 de agosto de 2023",
+    content: `
+      <p class="font-normal text-slate-600 mb-8">
+      Nora Carranza presidente de la Corporación Nacional de Colonias anunció que para la XXXI edición del festival nacional de Colonias, no habrá zona VIP, quien agregó: "las personas podrán tener a los artistas a escasos dos metros, las fiestas son de la gente y para la gente".
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      "Esperamos que todo sea un éxito, con la colaboración y el apoyo de todos podremos ser organizados, cumplir horarios, con respeto, recordar que estos son escenarios de compartir y disfrutar con las personas que amamos", mencionó Nora Carranza
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      Finalmente, el día de hoy jueves 17 de agosto de 2023, se da inició a esta edición del Festival Nacional de Colonias con la cabalgata femenina que se realizará a partir de las 2:00 p.m.
+      </p>    
+      <p class="font-semibold text-slate-600 italic mb-2">
+      #EstamosEnConexión.
+      </p>
+    `,
+    autor: "Carlos Barreto Blanco",
+    image: "/img/noticias/IMG_0716.jpeg",
+  },
+  {
     id: 37,
     title:
       "PAREJA QUE SE DIRIGIA A SU VIVIENDA FUE ARRASTRADA POR AVALANCHA EN VILLANUEVA CASANARE ",
@@ -20,7 +43,7 @@ const newsData = [
       #EstamosEnConexión.
       </p>
     `,
-    autor: "Gabriel Romero Blanco",
+    autor: "Carlos Barreto Blanco",
     image: "/img/noticias/IMG_0670.jpg",
   },
   {
