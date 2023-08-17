@@ -64,10 +64,10 @@ export default function Home() {
                     >
                       <div className="new-card__content w-1/2">
                         <div className="new-card__title">
-                          <h3 className="text-left text-xl font-semibold text-slate-800 mb-4">
+                          <h3 className="text-left md:text-xl text-lg font-semibold text-slate-800 mb-4">
                             {newItem.title}
                           </h3>
-                          <p className="font-normal text-slate-600">
+                          <p className="font-normal text-slate-600 hidden sm:block">
                             {newItem.description}
                           </p>
                         </div>

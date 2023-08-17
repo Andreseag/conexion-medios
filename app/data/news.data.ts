@@ -41,49 +41,6 @@ const newsData = [
     image: "/img/noticias/IMG_0665.jpeg",
   },
   {
-    id: 31,
-    title: "UNA PERSONA PERDIÓ LA VIDA EN ACCIDENTE EN EL CAÑO MIRRIBA",
-    description:
-      "Dos botes impulsados a motor chocaron violentamente en aguas del caño Mirriba, un hombre de 22 años perdió la vida.",
-    date: "12 de agosto 2023",
-    content: `
-      <p class="font-normal text-slate-600 mb-8">
-        La colisión de dos canoas impulsadas a motor y que hacían transito en aguas del caño Mirriba en la vereda Puerto Miriam de Villanueva, deja el saldo de un hombre fallecido y al menos dos personas más lesionadas.
-      </p>
-      <p class="font-normal text-slate-600 mb-8">
-      La víctima fatal de este accidente es un hombre de 22 años identificado como Juan Carlos Tirado León, quién arribó a Villanueva procedente de la ciudad de Villavicencio junto a miembros de su familia con el propósito de pasar unos días de recreación y descanso, sin embargo, hoy sobre el medio día, la canoa en la que se desplazaba junto a dos personas más, chocó de frente con otra canoa que pertenece a un pescador del sector. 
-      </p>
-      <p class="font-semibold text-slate-600 italic mb-8">
-      “Una de las canoas pasó sobre la otra y en ese momento impactó a Juan Carlos, lo tiró al agua y posteriormente fue encontrado sin vida en un sector en el que el caño tiene aproximadamente 5 metros de profundidad” - Comentan en algunos relatos.
-      </p>
-      <p class="font-normal text-slate-600 mb-8">
-      En este mismo hecho resultó herido un hombre identificado como Nelson Gallego, quién fue trasladado al Hospital Local de Villanueva con múltiples contusiones y herida abierta en uno de sus brazos.
-      </p>    
-    `,
-    autor: "Gabriel Romero Blanco",
-    image: "/img/noticias/IMG_0640.jpeg",
-  },
-  {
-    id: 32,
-    title: "LAS MUJERES LLEGARON A CUARTOS DE FINAL ",
-    description:
-      "Un gol en el minuto 51, selló un momento histórico para la selección femenina de fútbol nacional y avanzan a cuartos de final de la Copa Mundial Femenina de la FIFA.",
-    date: "8 de agosto 2023",
-    content: `
-      <p class="font-normal text-slate-600 mb-8">
-        La Selección Colombiana Femenina de Fútbol, ya se encuentra en cuartos de final de la Copa Mundial Femenina de la FIFA, el partido correspondiente a octavos de final se jugó hoy a las 3:00 a.m. hora de Colombia, contra Jamaica, quien se ubicó segunda  del "grupo f".
-      </p>
-      <p class="font-normal text-slate-600 mb-8">
-      El primer tiempo terminó sin goles, no fue hasta el minuto 51" que Ana Guzmán, realizó un pase de larga distancia hacía la banda derecha encontrando un control, recorte y disparo a portería por parte de Catalina Usme, siendo este el único gol del partido, suficiente para alcanzar la siguiente fase, de igual forma la selección femenina alcanza así la máxima fase conseguida por la selección Colombia masculina de fútbol en el mundial de Brasil 2014.
-      </p>
-      <p class="font-normal text-slate-600 mb-8">
-      El partido de cuartos de final se jugará contra Inglaterra Femenina de Fútbol luego de ganarle a la selección de Nigeria por penales.
-      </p>    
-    `,
-    autor: "Gabriel Romero Blanco",
-    image: "/img/noticias/IMG_0648.jpeg",
-  },
-  {
     id: 33,
     title:
       "9 CANDIDATOS A LA ALCALDÍA Y 147 CANDIDATOS AL CONCEJO EN 12 LISTAS, DEJÓ EL CIERRE DE INSCRIPCIÓNES ELECTORALES EN VILLANUEVA ",
@@ -421,6 +378,50 @@ const newsData = [
     autor: "Gabriel Romero Blanco",
     image: "/img/noticias/IMG_0651.jpeg",
   },
+  {
+    id: 31,
+    title: "UNA PERSONA PERDIÓ LA VIDA EN ACCIDENTE EN EL CAÑO MIRRIBA",
+    description:
+      "Dos botes impulsados a motor chocaron violentamente en aguas del caño Mirriba, un hombre de 22 años perdió la vida.",
+    date: "12 de agosto 2023",
+    content: `
+      <p class="font-normal text-slate-600 mb-8">
+        La colisión de dos canoas impulsadas a motor y que hacían transito en aguas del caño Mirriba en la vereda Puerto Miriam de Villanueva, deja el saldo de un hombre fallecido y al menos dos personas más lesionadas.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      La víctima fatal de este accidente es un hombre de 22 años identificado como Juan Carlos Tirado León, quién arribó a Villanueva procedente de la ciudad de Villavicencio junto a miembros de su familia con el propósito de pasar unos días de recreación y descanso, sin embargo, hoy sobre el medio día, la canoa en la que se desplazaba junto a dos personas más, chocó de frente con otra canoa que pertenece a un pescador del sector. 
+      </p>
+      <p class="font-semibold text-slate-600 italic mb-8">
+      “Una de las canoas pasó sobre la otra y en ese momento impactó a Juan Carlos, lo tiró al agua y posteriormente fue encontrado sin vida en un sector en el que el caño tiene aproximadamente 5 metros de profundidad” - Comentan en algunos relatos.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      En este mismo hecho resultó herido un hombre identificado como Nelson Gallego, quién fue trasladado al Hospital Local de Villanueva con múltiples contusiones y herida abierta en uno de sus brazos.
+      </p>    
+    `,
+    autor: "Gabriel Romero Blanco",
+    image: "/img/noticias/IMG_0640.jpeg",
+  },
+  {
+    id: 32,
+    title: "LAS MUJERES LLEGARON A CUARTOS DE FINAL ",
+    description:
+      "Un gol en el minuto 51, selló un momento histórico para la selección femenina de fútbol nacional y avanzan a cuartos de final de la Copa Mundial Femenina de la FIFA.",
+    date: "8 de agosto 2023",
+    content: `
+      <p class="font-normal text-slate-600 mb-8">
+        La Selección Colombiana Femenina de Fútbol, ya se encuentra en cuartos de final de la Copa Mundial Femenina de la FIFA, el partido correspondiente a octavos de final se jugó hoy a las 3:00 a.m. hora de Colombia, contra Jamaica, quien se ubicó segunda  del "grupo f".
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      El primer tiempo terminó sin goles, no fue hasta el minuto 51" que Ana Guzmán, realizó un pase de larga distancia hacía la banda derecha encontrando un control, recorte y disparo a portería por parte de Catalina Usme, siendo este el único gol del partido, suficiente para alcanzar la siguiente fase, de igual forma la selección femenina alcanza así la máxima fase conseguida por la selección Colombia masculina de fútbol en el mundial de Brasil 2014.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      El partido de cuartos de final se jugará contra Inglaterra Femenina de Fútbol luego de ganarle a la selección de Nigeria por penales.
+      </p>    
+    `,
+    autor: "Gabriel Romero Blanco",
+    image: "/img/noticias/IMG_0648.jpeg",
+  },
+
   {
     id: 34,
     title: "¿QUÉ CAUSÓ LA MUERTE DE ABI CAMILA BORDA IBARGUEN?",

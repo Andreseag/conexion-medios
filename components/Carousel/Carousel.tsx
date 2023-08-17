@@ -20,7 +20,7 @@ const Carousel = () => {
                   width={1920}
                   height={1080}
                   alt="carousel-1"
-                  className="object-cover h-60 sm:h-72 md:h-96"
+                  className="object-cover h-36 sm:h-52 md:h-80"
                 />
               </div>
             </div>
