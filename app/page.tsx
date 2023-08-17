@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Home() {
   const getNew = () => {
-    const id = parseInt("33");
+    const id = parseInt("36");
     const newSelected = newsData.find((n) => n.id === id);
     return newSelected;
   };
@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <div className="home flex flex-col items-center">
-        <div className="home__container w-11/12 md:w-4/5 lg:w-2/3">
+        <div className="home__container w-11/12 xl:w-2/3">
           {/* Carousel */}
           <Carousel />
 
@@ -55,7 +55,7 @@ export default function Home() {
           <div className="news-list mt-10">
             <div className="new-list__container grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-6">
               {newsData
-                .filter((item) => item.id != parseInt("33"))
+                .filter((item) => item.id != parseInt("36"))
                 .map((newItem, i) => (
                   <Link key={i} href={`/noticias/${newItem.id}`}>
                     <div
