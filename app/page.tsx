@@ -9,8 +9,7 @@ export const metadata = {
 
 export default function Home() {
   const getNew = () => {
-    const id = parseInt("36");
-    const newSelected = newsData.find((n) => n.id === id);
+    const newSelected = newsData.find((n, key) => key === 0);
     return newSelected;
   };
 
@@ -55,7 +54,7 @@ export default function Home() {
           <div className="news-list mt-10">
             <div className="new-list__container grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-6">
               {newsData
-                .filter((item) => item.id != parseInt("36"))
+                .filter((item, key) => key != 0)
                 .map((newItem, i) => (
                   <Link key={i} href={`/noticias/${newItem.id}`}>
                     <div

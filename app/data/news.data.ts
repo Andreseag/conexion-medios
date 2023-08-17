@@ -1,5 +1,29 @@
 const newsData = [
   {
+    id: 37,
+    title:
+      "PAREJA QUE SE DIRIGIA A SU VIVIENDA FUE ARRASTRADA POR AVALANCHA EN VILLANUEVA CASANARE ",
+    description:
+      "Una pareja que se movilizaba hacía su vivienda luego de trabajar, fueron víctimas de avalancha en la vereda El Triunfo en Villanueva Casanare, el pasado lunes 14 de agosto.",
+    date: "17 de agosto de 2023",
+    content: `
+      <p class="font-normal text-slate-600 mb-8">
+      El pasado lunes 14 de agosto de 2023, sobre las 7:30 p.m. Deicy Hernández y su pareja Jhon Martínez se dirigían hacia su vivienda luego de una jornada laboral, la casa se encuentra ubicada en la vereda El Triunfo de Villanueva Casanare, por la vía "El aeropuerto", las lluvias que se presentaron aquel día y la falta de luces en el sector impidieron a la pareja percatarse que algunos metros antes de llegar a su vivienda, se presentaba una avalancha de agua, palos y piedras que se incrementó con los desagües de los barrios ubicados más arriba.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      "Miramos que no había agua y pensamos que alcanzaríamos a pasar, luego escuchamos un ruido de piedras estallando que venía bajando desde la casa, nos llevó a ambos y a la moto en la que nos movilizamos, hasta caer en la cuneta", Deicy quedó atrapada debajo de la moto, mientras que su pareja se aferraba al manubrio de la misma, en un momento él fue arrastrado aproximadamente 100 metros junto a la moto, pasando por debajo del puente de la "Y", mientras que ella se sostenía de la carretera con la mitad inferior del cuerpo en la cuneta.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      Deicy cuenta: “Gracias a Dios por el lugar se encontraba un señor de la tercera edad que me sacó de la cuneta, mi novio logró salir al tenerse de una raíz, intentó sostener la moto que no era de nosotros, pero tuvo que soltarla, finalmente habitantes de la vereda la encontraron muchos metros más abajo sobre el muro de la casa de Pedro Rodríguez”, además señaló “estamos vivos y no sabemos cómo, perdimos todos los elementos de mi oficina, encontramos muchas cosas al día siguiente sobre el “caño picho” hasta el puente de la séptima, interpondré una denuncia, pues ese problema lo hemos sufrido muchos años y en la administración municipal esa calle reposa como “pavimentada” y nadie la interviene”.
+      </p>    
+      <p class="font-semibold text-slate-600 italic mb-2">
+      #EstamosEnConexión.
+      </p>
+    `,
+    autor: "Gabriel Romero Blanco",
+    image: "/img/noticias/IMG_0670.jpg",
+  },
+  {
     id: 36,
     title: "GEOPARK ENTREGÓ BECAS UNIVERSITARIAS A 20 JÓVENES CASANAREÑOS",
     description:
