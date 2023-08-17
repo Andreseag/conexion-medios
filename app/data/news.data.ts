@@ -1,5 +1,46 @@
 const newsData = [
   {
+    id: 36,
+    title: "GEOPARK ENTREGÓ BECAS UNIVERSITARIAS A 20 JÓVENES CASANAREÑOS",
+    description:
+      "En alianza con la Universidad Nacional Abierta y a Distancia (UNAD), GeoPark entregó 20 becas universitarias a un número igual de estudiantes casanareños para que realicen sus estudios de educación superior.",
+    date: "17 de agosto de 2023",
+    content: `
+      <p class="font-normal text-slate-600 mb-8">
+      “Tras un riguroso proceso de selección y admisión liderado por el equipo de profesionales de la UNAD, 10 mujeres y 10 hombres de Tauramena y de Villanueva, lugares en los cuales la Compañía desarrolla sus operaciones, resultaron beneficiados” – Señala Geopark en comunicado de prensa y agrega que las becas cubren el 100% de la matrícula universitaria durante toda la carrera escogida por los estudiantes.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      Diego Morales, gerente de relaciones con Vecinos en GeoPark manifestó: “Este programa de becas que lanzamos con la Universidad Nacional Abierta y a Distancia (UNAD) es un ejemplo más de nuestra apuesta para promover el desarrollo del territorio. Estamos convencidos de que en la medida en que más jóvenes cuenten con la oportunidad de acceder a programas educativos de calidad, estaremos aportando a la transformación social positiva del territorio”.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      Para la empresa petrolera, este programa es reflejo del compromiso continuo de GeoPark por impulsar la educación superior en Casanare. En los últimos cinco años, la Compañía ha promovido la educación formal de jóvenes a través del programa de Becas Universitarias para Mujeres en Ciencias e Ingenierías que actualmente beneficia a seis mujeres casanareñas.
+      </p>    
+    `,
+    autor: "Gabriel Romero Blanco",
+    image: "/img/noticias/IMG_0695.jpeg",
+  },
+  {
+    id: 35,
+    title:
+      "RELEVO EN LA PERSONERÍA DE VILLANUEVA, CONCEJO MUNICIPAL POSESIONÓ A NUEVO PERSONERO ENCARGADO",
+    description:
+      "Francisco Cala Castro, quien venía ejerciendo como personero municipal de Villanueva Casanare desde el 21 de septiembre de 2021, presentó renuncia irrevocable a su cargo, razón por la que el Concejo Municipal, posesionó a Tirso Hidalgo Aguilar como personero encargado.",
+    date: "16 de agosto de 2023",
+    content: `
+      <p class="font-normal text-slate-600 mb-8">
+      El ahora Personero de Villanueva, estará ejerciendo sus funciones hasta que y de acuerdo al procedimiento normativo, la Corporación Concejo Municipal realice el proceso de comunicación con las personas que hacen parte de la lista de elegibles definida en la resolución 049 del 8 de septiembre de 2021. 
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      De acuerdo a esta resolución, Jorge Enrique Pérez Cáceres, sería la persona que, de aceptar el cargo, asumiría en propiedad la vacante como Personero del municipio de Villanueva, sin embargo, aún no se ha conocido la aceptación del nombramiento. “Ya nos hemos comunicado de manera escrita con el abogado Jorge Enrique Pérez Cáceres, él tiene un plazo de diez días para aceptar el llamado a ocupar el cargo, de no hacerlo o no aceptar, seguiremos con la comunicación en estricto orden, con las personas relacionadas en la resolución 049” – Expresó Elquin Álvarez, presidente del Concejo Municipal.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      Entre tanto, Tirso Hidalgo Aguilar, es abogado de profesión, tiene 26 años de edad y se venía desempeñando como secretario Privado de la Personería Municipal desde hace un año, su llegada de manera transitoria al cargo, se da con el fin de no generar discontinuidad, interrupción o retraso en el servicio de la Personería, por tal razón, la plenaria de la Corporación aprobó que se nombrara como Personero Encargado a Tirso Hidalgo Aguilar.
+      </p>    
+    `,
+    autor: "Gabriel Romero Blanco",
+    image: "/img/noticias/IMG_0665.jpeg",
+  },
+  {
     id: 31,
     title: "UNA PERSONA PERDIÓ LA VIDA EN ACCIDENTE EN EL CAÑO MIRRIBA",
     description:
