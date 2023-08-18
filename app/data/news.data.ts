@@ -1,5 +1,26 @@
 const newsData = [
   {
+    id: 39,
+    title:
+      "INICIÓ EL FESTIVAL NACIONAL DE COLONIAS 2023 CON LA CABALGATA FEMENINA",
+    description:
+      "En entrevista con Conexión Medios, Nora Carranza presidente de la Corporación Nacional de Colonias, anunció que para la edición XXXI del Festival Nacional de Colonias no habrá zona VIP, además invitó a las personas a participar de manera respetuosa y responsable.",
+    date: "17 de agosto de 2023",
+    content: `
+      <p class="font-normal text-slate-600 mb-8">
+      Como es costumbre cada año, la cabalgata femenina marca el inicio del Festival Nacional de Colonias, hoy, mujeres, adolescentes y niñas iniciaron a lomo de sus caballos, un recorrido que partió desde "El Jardín del Abuelo" atravesando diferentes calles de Villanueva Casanare y finalizando en el estadio municipal.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      Con la participación de diferentes mujeres referentes en el municipio, además de Leidy Lara y Virginia Rocha como invitadas especiales, en #fotografías quedó registrada la cabalgata femenina del XXXI Festival Nacional de Colonias.
+      </p>
+      <p class="font-semibold text-slate-600 italic mb-2">
+      #EstamosEnConexión.
+      </p>
+    `,
+    autor: "Carlos Barreto Blanco",
+    image: "/img/noticias/IMG_0746.jpeg",
+  },
+  {
     id: 38,
     title: "NO HABRÁ ZONA VIP EN EL FESTIVAL NACIONAL DE COLONIAS 2023",
     description:
