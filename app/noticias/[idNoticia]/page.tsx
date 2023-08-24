@@ -33,7 +33,7 @@ export default function New({ params }: { params: { idNoticia: string } }) {
             <Image
               alt="Imagen de la noticia"
               src={newSelected.image}
-              width={800}
+              width={1200}
               height={600}
               className="mb-10"
             />

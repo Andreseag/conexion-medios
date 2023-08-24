@@ -33,7 +33,7 @@ export default function Home() {
                   <p className="text-sm mt-2 italic font-normal text-slate-600">
                     {heroNew.date}
                   </p>
-                  <p className="text-lg mt-6 mb-3 font-normal text-slate-600">
+                  <p className="text-lg mt-6 mb-3 text-slate-600">
                     {heroNew.description}
                   </p>
                 </div>
@@ -66,7 +66,7 @@ export default function Home() {
                           <h3 className="text-left md:text-xl text-lg font-semibold text-slate-800 mb-4">
                             {newItem.title}
                           </h3>
-                          <p className="font-normal text-slate-600 hidden sm:block">
+                          <p className="text-slate-600 hidden sm:block">
                             {newItem.description}
                           </p>
                         </div>

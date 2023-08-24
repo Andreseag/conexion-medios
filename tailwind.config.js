@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         // sans: ["BDPBIRGULA"],
         // birgula: ["BDPBIRGULA", "sans-serif"],
+        'lora': ['Lora', 'serif'],
       },
       opacity: ["disabled"],
     },

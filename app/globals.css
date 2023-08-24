@@ -1,12 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Lora:ital@1&family=Playfair+Display:wght@500&display=swap');
 
 @import 'swiper/css';
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 @import 'swiper/css/scrollbar';
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --principal-font: 'Inter', sans-serif;
+  --secondary-font: 'Playfair Display', 'Inter', sans-serif;
+}
 
 
 @font-face {
@@ -25,8 +30,24 @@
   }
 
   h1, p {
-    @apply text-slate-800
+    @apply text-slate-800 font-light
   }
 
-  
+}
+
+body {
+  font-family: var(--principal-font);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--slate-800);
+  background-color: var(--slate-100);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--secondary-font); 
+  color: var(--slate-800);
+}
+
+p {
+  @apply text-slate-800 font-light
 }

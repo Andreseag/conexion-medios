@@ -1,5 +1,26 @@
 const newsData = [
   {
+    id: 40,
+    title:
+      "LA REGISTRADURÍA COMUNICA QUE HAY PLAZO PARA INSCRIPCIÓN DE CÉDULAS HASTA EL 29 DE AGOSTO DE 2023",
+    description:
+      "A falta de seis días para el cierre de inscripciones de cédulas para la participación en las elecciones territoriales 2023, la Registraduría invita a los ciudadanos a realizar este proceso y 'no dejar para última hora'.",
+    date: "24 de agosto de 2023",
+    content: `
+      <p class="font-normal text-slate-600 mb-8">
+      A partir de hoy 24 de agosto de 2023, faltan 6 días para la finalización del periodo de inscripción de ciudadanos para votar en las elecciones territoriales 2023, además de actualizar lugar de domicilio y puesto de votación.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      La Registraduría Nacional del Estado Civil, anuncia que el próximo 29 de agosto finaliza la inscripción de ciudadanos para votar en las #EleccionesTerritoriales2023. También invita a los ciudadanos a no dejar para última hora la inscripción de cédulas para lo cual se puede acudir a registradurías especiales, municipales y auxiliares o a los "puntos móviles" de Inscripción habilitados de 8:00 a. m. a 8:00 p.m.
+      </p>
+      <p class="font-semibold text-slate-600 italic mb-2">
+      #EstamosEnConexión.
+      </p>
+    `,
+    autor: "Carlos Barreto Blanco",
+    image: "/img/noticias/IMG_0688.jpeg",
+  },
+  {
     id: 39,
     title:
       "INICIÓ EL FESTIVAL NACIONAL DE COLONIAS 2023 CON LA CABALGATA FEMENINA",
