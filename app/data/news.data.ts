@@ -1,5 +1,26 @@
 const newsData = [
   {
+    id: 41,
+    title:
+      "FLOR DENIS RUIZ BATIÓ RÉCORD AMERICANO EN EL MUNDIAL DE ATLETISMO Y SE LLEVÓ LA MEDALLA DE PLATA",
+    description:
+      "La atleta colombiana Flor Ruiz, rompió el récord americano de lanzamiento de jabalina en el mundial de atletismo 2023, se hizo con la medalla de plata y se clasificó a a los Juegos Olímpicos de Paris 2024.",
+    date: "25 de agosto de 2023",
+    content: `
+      <p class="font-normal text-slate-600 mb-8">
+      La atleta Colombiana Flor Ruiz, disputó hoy la final de la prueba de lanzamiento de jabalina en el Mundial de Atletismo 2023 realizado en Budapest capital de Hungría, con un lanzamiento de 65,47 metros la colombiana rompió el récord americano en esta prueba, manteniendo el liderato en la final hasta que su rival, Haruka Kitagushi de Japón, en el sexto intento logró llegar a 66,73 metros para quedarse con el oro.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      Con la medalla de plata, Flor, se clasifica a los Juegos Olímpicos de Paris del 2024, "La medalla es para Colombia, para toda mi gente, me gustaría el oro, pero me siento bien porque es mi mejor marca. Estoy súper agradecida, no tengo palabras" comentó Flor Ruiz-después de hacerse con la plata.
+      </p>
+      <p class="font-semibold text-slate-600 italic mb-2">
+      #EstamosEnConexión.
+      </p>
+    `,
+    autor: "Carlos Barreto Blanco",
+    image: "/img/noticias/IMG_0633.jpeg",
+  },
+  {
     id: 40,
     title:
       "LA REGISTRADURÍA COMUNICA QUE HAY PLAZO PARA INSCRIPCIÓN DE CÉDULAS HASTA EL 29 DE AGOSTO DE 2023",

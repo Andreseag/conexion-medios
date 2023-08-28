@@ -2,6 +2,8 @@ import Image from "next/image";
 import newsData from "@/app/data/news.data";
 import Link from "next/link";
 import Carousel from "@/components/Carousel/Carousel";
+import { capitalizeString } from "./utils";
+import NewCard from "@/components/NewCard/NewCard";
 
 export const metadata = {
   title: "Conexión medios",
@@ -56,32 +58,7 @@ export default function Home() {
               {newsData
                 .filter((item, key) => key != 0)
                 .map((newItem, i) => (
-                  <Link key={i} href={`/noticias/${newItem.id}`}>
-                    <div
-                      key={i}
-                      className="new-card w-full flex gap-1 md:gap-2"
-                    >
-                      <div className="new-card__content w-1/2">
-                        <div className="new-card__title">
-                          <h3 className="text-left md:text-xl text-lg font-semibold text-slate-800 mb-4">
-                            {newItem.title}
-                          </h3>
-                          <p className="text-slate-600 hidden sm:block">
-                            {newItem.description}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="new-card__image w-1/2">
-                        <Image
-                          alt="Imagen de la noticia"
-                          src={newItem.image}
-                          width={1200}
-                          height={1200}
-                          className="object-cover h-44 "
-                        />
-                      </div>
-                    </div>
-                  </Link>
+                  <NewCard key={i} newItem={newItem} />
                 ))}
             </div>
           </div>
