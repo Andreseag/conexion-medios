@@ -1,5 +1,44 @@
 const newsData = [
   {
+    id: 42,
+    title:
+      "Marisela Duarte: Por primera vez una mujer es la más opcionada para ser Gobernadora de Casanare",
+    description:
+      "Marisela Duarte es una casanareña, nacida y criada en un hogar de origen campesino, ama de casa, empresaria y líder de causas nobles. Siendo muy joven formó un hogar con Alirio Barrera, ex gobernador de Casanare para el periodo 2016-2019, y actual Senador de la República con quien tuvo 4 hijos.",
+    date: "25 de agosto de 2023",
+    content: `
+      <p class="font-normal text-slate-600 mb-8">
+      Marisela Duarte, se desempeñó como gestora social departamental, donde logró ganar rápidamente un reconocimiento en medio de la población por su sencillez, carisma, don de gente, carácter firme y capacidad para gestionar ayudas humanitarias para las personas más vulnerables en los 19 municipios.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      Hoy, transcurrido un mes de carrera para ser la primera gobernadora por voto popular en la historia de Casanare, su liderazgo ha calado en la mente de líderes muy destacados en el departamento, quienes se han sumado a su proyecto político, convirtiendo su candidatura en una de las más fuertes de la contienda electoral, por ello debe reconocerse que en gran medida se debe a su paso por el sector público como gestora social, logró liderar la gestión social y humanitaria en todos los municipios de Casanare en el periodo 2016-2019. Ahora quiere demostrar como ya lo hizo antes, que cuando las mujeres deciden trabajar de corazón por la gente, son capaces de lograr grandes cambios en la sociedad y en la política.
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      Estos son algunos de sus logros como gestora social:
+      </p>
+      <li class="font-normal text-slate-600 mb-4">
+        Liderar la gestión social y humanitaria en todos los municipios de Casanare en el periodo 2016-2019.
+      </li>
+      <li class="font-normal text-slate-600 mb-4">
+        Apoyar la formulación, sustentación y aprobación de la Política Publica Departamental para la Mujer, Adulto Mayor, Equidad de Género y Juventudes.
+      </li>
+      <li class="font-normal text-slate-600 mb-4">
+      Impulso y gestión para la creación de la Secretaría de la Mujer en la estructura de gobierno departamental.
+      </li>
+      <li class="font-normal text-slate-600 mb-4">
+      Gestión y liderazgo para la construcción de obras sociales, parques infantiles en todo el departamento y la construcción y dotación de los Centros de Desarrollo Infantil en los municipios de Villanueva, Tauramena, Yopal,Aguazul y Maní. 
+      </li>
+      <li class="font-normal text-slate-600 mb-4">
+      Implementación de proyectos productivos para la población vulnerable y apoyo a familias con mayores necesidades.
+      </li>
+      <p class="font-semibold text-slate-600 italic mb-2">
+      #EstamosEnConexión.
+      </p>
+    `,
+    autor: "Prensa Marisela Duarte ",
+    image: "/img/noticias/IMG_0634.jpeg",
+  },
+  {
     id: 41,
     title:
       "FLOR DENIS RUIZ BATIÓ RÉCORD AMERICANO EN EL MUNDIAL DE ATLETISMO Y SE LLEVÓ LA MEDALLA DE PLATA",
