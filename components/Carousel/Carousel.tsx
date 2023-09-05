@@ -16,11 +16,11 @@ const Carousel = () => {
             <div className="carousel-home__slide">
               <div className="carousel-home__slide__content">
                 <Image
-                  src="/img/AFICHE-COLONIAS-2023-FINAL-BIO-FACEBOOK.jpg"
+                  src="/img/BANNER-WEB-15956x5906-GV.png"
                   width={1920}
                   height={1080}
                   alt="carousel-1"
-                  className="object-cover h-36 sm:h-52 md:h-80"
+                  // className="object-cover h-36 sm:h-52 md:h-96"
                 />
               </div>
             </div>

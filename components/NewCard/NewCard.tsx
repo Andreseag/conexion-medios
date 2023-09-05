@@ -17,7 +17,7 @@ const NewCard = ({ newItem }: Props) => {
       <div className="new-card w-full flex gap-1 md:gap-2">
         <div className="new-card__content w-1/2">
           <div className="new-card__title">
-            <h3 className="text-left md:text-xl text-lg font-semibold text-slate-800 mb-4">
+            <h3 className="text-left capitalize md:text-xl text-lg font-semibold text-slate-800 mb-4">
               {newItem.title}
             </h3>
             <p className="text-slate-600 hidden sm:block">
