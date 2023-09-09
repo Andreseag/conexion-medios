@@ -2,6 +2,27 @@ const newsData = [
   {
     id: 42,
     title:
+      "Joven de 18 años responsable de hurto de una bicicleta en Villanueva",
+    description:
+      "En manos de una joven habitante de calle, Policía Nacional recuperó bicicleta robada previamente en el barrio Morichal en Villanueva.",
+    date: "25 de agosto de 2023",
+    content: `
+      <p class="font-normal text-slate-600 mb-8">
+      De acuerdo a las versiones entregadas por la víctima de este hurto, su bicicleta de marca GW color negro y rojo, fue robada cuando se encontraba estacionada sobre el andén de la calle 18 con carrera 10, tras percatarse de lo sucedido, logró visualizar a una mujer de contextura delgada que se desplazaba por la carrera 14 con rumbo a la zona centro de Villanueva e informó a efectivos de la Policía Nacional. 
+      </p>
+      <p class="font-normal text-slate-600 mb-8">
+      Luego de labores de búsqueda, el cuadrante 1 de la Policía en Vilanueva, ubicó en inmediaciones al caño arietes a una mujer con las características descritas por la denunciante y quién tenía en su poder la bicicleta GW color negro con rojo. Al verificar sériales  junto a la tarjeta de propiedad de la bicicleta, se materializó la captura de Diana Marcela Prieta Amaya de 18 años de edad, por el delito de hurto. La bicicleta ya fue entregada a su propietaria.
+      </p>
+      <p class="font-semibold text-slate-600 italic mb-2">
+      #EstamosEnConexión.
+      </p>
+    `,
+    autor: "Gabriel Romero Blanco",
+    image: "/img/noticias/IMG_0635.jpg",
+  },
+  {
+    id: 42,
+    title:
       "Marisela Duarte: Por primera vez una mujer es la más opcionada para ser Gobernadora de Casanare",
     description:
       "Marisela Duarte es una casanareña, nacida y criada en un hogar de origen campesino, ama de casa, empresaria y líder de causas nobles. Siendo muy joven formó un hogar con Alirio Barrera, ex gobernador de Casanare para el periodo 2016-2019, y actual Senador de la República con quien tuvo 4 hijos.",
