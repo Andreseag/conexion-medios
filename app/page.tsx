@@ -4,6 +4,7 @@ import Link from "next/link";
 import Carousel from "@/components/Carousel/Carousel";
 import { capitalizeString } from "./utils";
 import NewCard from "@/components/NewCard/NewCard";
+import HomeMainNews from "@/components/HomeMainNews/HomeMainNews";
 
 export const metadata = {
   title: "Conexión medios",
@@ -20,12 +21,12 @@ export default function Home() {
   return (
     <>
       <div className="home flex flex-col items-center">
-        <div className="home__container w-11/12 xl:w-2/3">
+        <div className="home__container w-11/12 xl:w-10/12">
           {/* Carousel */}
-          <Carousel />
-
+          {/* <Carousel /> */}
+          <HomeMainNews />
           {/* Hero */}
-          {heroNew && (
+          {/* {heroNew && (
             <Link href={`/noticias/${heroNew.id}`}>
               <div className="home__hero mt-10 flex flex-col md:flex-row gap-4 border-b border-gray-400">
                 <div className="hero__description">
@@ -50,10 +51,9 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-          )}
-
+          )} */}
           {/* News List */}
-          <div className="news-list mt-10">
+          {/* <div className="news-list mt-10">
             <div className="new-list__container grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-6">
               {newsData
                 .filter((item, key) => key != 0)
@@ -61,7 +61,7 @@ export default function Home() {
                   <NewCard key={i} newItem={newItem} />
                 ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
