@@ -5,12 +5,21 @@ import Carousel from "@/components/Carousel/Carousel";
 import { capitalizeString } from "./utils";
 import NewCard from "@/components/NewCard/NewCard";
 import HomeMainNews from "@/components/HomeMainNews/HomeMainNews";
+import { getApiAllPosts } from "./api/posts/postsActions";
 
 export const metadata = {
   title: "Conexión medios",
 };
 
-export default function Home() {
+async function GetPosts() {
+  getApiAllPosts();
+}
+
+const Home = async () => {
+  const posts = await GetPosts();
+  console.log("-----------------------");
+  console.log(posts);
+
   const getNew = () => {
     const newSelected = newsData.find((n, key) => key === 0);
     return newSelected;
@@ -66,4 +75,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;

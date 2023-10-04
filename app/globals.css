@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Lora:ital@1&family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap');
 
 @import 'swiper/css';
 @import 'swiper/css/navigation';
@@ -11,6 +12,7 @@
 :root {
   --principal-font: 'Inter', sans-serif;
   --secondary-font: 'Playfair Display', 'Inter', sans-serif;
+  --title-news-font: 'Cormorant Garamond', 'Inter', sans-serif;
 }
 
 @font-face {
@@ -38,7 +40,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--secondary-font); 
+  font-family: var(--title-news-font); 
   color: var(--slate-800);
 }
 
