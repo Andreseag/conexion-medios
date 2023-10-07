@@ -12,20 +12,14 @@ export const metadata = {
 };
 
 async function GetPosts() {
-  getApiAllPosts();
+  return getApiAllPosts();
 }
 
 const Home = async () => {
   const posts = await GetPosts();
   console.log("-----------------------");
   console.log(posts);
-
-  const getNew = () => {
-    const newSelected = newsData.find((n, key) => key === 0);
-    return newSelected;
-  };
-
-  const heroNew = getNew();
+  console.log("-----------------------");
 
   return (
     <>
@@ -33,7 +27,7 @@ const Home = async () => {
         <div className="home__container w-11/12 xl:w-10/12">
           {/* Carousel */}
           {/* <Carousel /> */}
-          <HomeMainNews />
+          <HomeMainNews posts={posts} />
           {/* Hero */}
           {/* {heroNew && (
             <Link href={`/noticias/${heroNew.id}`}>

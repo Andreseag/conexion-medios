@@ -1,19 +1,10 @@
-const ApiBaseUrl = "http://localhost:1337/api";
+import { Posts } from "@/app/types/posts.type";
+
+const ApiBaseUrl = process.env.API_URL;
 const postsUrl = `${ApiBaseUrl}/noticas`;
 
 export enum PostsCategories {
   Actividades = "actividades",
-  Booktrailer = "booktrailer",
-  Entrevistas = "entrevistas",
-  Noticias = "noticias",
-  Recomendados = "recomendados",
-  Reportajes = "reportajes",
-  Resenas = "resenas",
-  RutasLiterarias = "rutas-literarias",
-  SinCategoria = "sin-categoria",
-  Taller = "taller",
-  VerParaLeer = "ver-para-leer",
-  Articulo = "articulo",
 }
 
 export type ApiPostsFilters = {
@@ -23,19 +14,7 @@ export type ApiPostsFilters = {
 
 export const defaultPostsFilters: ApiPostsFilters = {
   populate: "*",
-  categories: [
-    PostsCategories.Actividades,
-    PostsCategories.Booktrailer,
-    PostsCategories.Entrevistas,
-    PostsCategories.Noticias,
-    PostsCategories.Recomendados,
-    PostsCategories.Reportajes,
-    PostsCategories.Resenas,
-    PostsCategories.RutasLiterarias,
-    PostsCategories.SinCategoria,
-    PostsCategories.Taller,
-    PostsCategories.Articulo,
-  ],
+  categories: [PostsCategories.Actividades],
 };
 
 export const defaultBlogPostFilters = {
@@ -50,16 +29,8 @@ export const getApiAllPosts = async (
       "?" +
       new URLSearchParams({
         populate: `${filters.populate}`,
-      }),
-    {
-      next: {
-        revalidate: 3600,
-      },
-    }
-  )
-    .then((res) => res.json())
-    .catch((err) => console.log(err));
-  console.log("postsData", postsData);
+      })
+  ).then((res) => res.json() as Promise<Posts>);
 
   return postsData;
 };
