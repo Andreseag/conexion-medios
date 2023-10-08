@@ -1,39 +1,39 @@
 import Link from "next/link";
 
-const categoriesData = [
-  {
-    name: "Deportes",
-    url: "/",
-  },
-  {
-    name: "Entretenimiento",
-    url: "/",
-  },
-  {
-    name: "Salud",
-    url: "/",
-  },
-  {
-    name: "Opinión",
-    url: "/",
-  },
-  {
-    name: "Economía",
-    url: "/",
-  },
-  {
-    name: "Judicial",
-    url: "/",
-  },
-  {
-    name: "Programas",
-    url: "/",
-  },
-  {
-    name: "Ciencia y Tecnología",
-    url: "/",
-  },
-];
+// const categoriesData = [
+//   {
+//     name: "Deportes",
+//     url: "/",
+//   },
+//   {
+//     name: "Entretenimiento",
+//     url: "/",
+//   },
+//   {
+//     name: "Salud",
+//     url: "/",
+//   },
+//   {
+//     name: "Opinión",
+//     url: "/",
+//   },
+//   {
+//     name: "Economía",
+//     url: "/",
+//   },
+//   {
+//     name: "Judicial",
+//     url: "/",
+//   },
+//   {
+//     name: "Programas",
+//     url: "/",
+//   },
+//   {
+//     name: "Ciencia y Tecnología",
+//     url: "/",
+//   },
+// ];
 
 const NavEspecialCategories = () => {
   return (
@@ -44,7 +44,7 @@ const NavEspecialCategories = () => {
         </span>
         <nav>
           <ul className="flex gap-4">
-            {categoriesData.map((category, i) => (
+            {/* {categoriesData.map((category, i) => (
               <li key={i}>
                 <Link
                   href={category.url}
@@ -53,7 +53,15 @@ const NavEspecialCategories = () => {
                   {category.name}
                 </Link>
               </li>
-            ))}
+            ))} */}
+            <li>
+              <Link
+                href={"/"}
+                className="text-white hover:underline text-sm py-2"
+              >
+                Ver noticias de actualidad
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

@@ -23,7 +23,7 @@ const categoriesData = [
     url: "/",
   },
   {
-    name: "Emprendimiento",
+    name: "Judicial",
     url: "/",
   },
 ];

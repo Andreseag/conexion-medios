@@ -2,15 +2,19 @@ import Link from "next/link";
 
 const categoriesData = [
   {
+    name: "Salud",
+    url: "/",
+  },
+  {
     name: "Deportes",
     url: "/",
   },
   {
-    name: "Entretenimiento",
+    name: "Emprendimiento",
     url: "/",
   },
   {
-    name: "Salud",
+    name: "Cronicas",
     url: "/",
   },
   {
@@ -22,15 +26,11 @@ const categoriesData = [
     url: "/",
   },
   {
-    name: "Judicial",
+    name: "Deportes",
     url: "/",
   },
   {
-    name: "Programas",
-    url: "/",
-  },
-  {
-    name: "Ciencia y Tecnología",
+    name: "Especiales",
     url: "/",
   },
 ];
