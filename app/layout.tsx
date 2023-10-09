@@ -1,5 +1,9 @@
-import "./globals.css";
+// Components
+import Footer from "@/components/Layout/Footer/Footer";
 import Header from "./header/page";
+
+// Styles
+import "./globals.css";
 
 export default function RootLayout({
   children,
@@ -18,6 +22,7 @@ export default function RootLayout({
       <body>
         <Header />
         <div className="building-view">{children}</div>
+        {/* <Footer /> */}
       </body>
     </html>
   );
