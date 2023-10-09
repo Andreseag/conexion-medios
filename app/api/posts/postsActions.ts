@@ -2,25 +2,30 @@ import { Posts } from "@/app/types/posts.type";
 
 const ApiBaseUrl = process.env.API_URL;
 const postsUrl = `${ApiBaseUrl}/noticas`;
+const mainPostUrl = `${ApiBaseUrl}/main-posts`;
 
 export enum PostsCategories {
-  Actividades = "actividades",
+  POLITICS = "politica",
+  ACTUALITY = "actualidad",
 }
 
 export type ApiPostsFilters = {
-  populate: string;
+  populateAll: string;
+  populateImage: string;
   categories: Array<string>;
 };
 
 export const defaultPostsFilters: ApiPostsFilters = {
-  populate: "*",
-  categories: [PostsCategories.Actividades],
+  populateAll: "*",
+  populateImage: "url",
+  categories: [PostsCategories.POLITICS],
 };
 
 export const defaultBlogPostFilters = {
   slug: "",
 };
 
+// Get all posts
 export const getApiAllPosts = async (
   filters: ApiPostsFilters = defaultPostsFilters
 ) => {
@@ -28,13 +33,34 @@ export const getApiAllPosts = async (
     postsUrl +
       "?" +
       new URLSearchParams({
-        populate: `${filters.populate}`,
+        "populate[image][fields][0]": `${filters.populateImage}`,
+        "populate[categories][fields][0]": `${filters.populateAll}`,
       })
   ).then((res) => res.json() as Promise<Posts>);
 
   return postsData;
 };
 
+// Get posts by category
+export const getApiPostsByCategory = async (
+  category: string,
+  pageSize: number = 12
+) => {
+  const postsData = await fetch(
+    postsUrl +
+      "?" +
+      new URLSearchParams({
+        "populate[image][fields][0]": `${defaultPostsFilters.populateImage}`,
+        "populate[categories][fields][0]": `${defaultPostsFilters.populateAll}`,
+        "filters[categories][slug][$eq]": `${category}`,
+        "pagination[pageSize]": `${pageSize}`,
+      })
+  ).then((res) => res.json() as Promise<Posts>);
+
+  return postsData;
+};
+
+// Get post by slug
 export const getApiPost = async (
   slug: string = defaultBlogPostFilters.slug
 ) => {
@@ -43,5 +69,25 @@ export const getApiPost = async (
       revalidate: 3600,
     },
   }).then((res) => res.json());
+  return postData;
+};
+
+// Get main post
+export const getApiMainPost = async (
+  filters: ApiPostsFilters = defaultPostsFilters
+) => {
+  const postData = await fetch(
+    mainPostUrl +
+      "?" +
+      new URLSearchParams({
+        "populate[image][fields][0]": `${filters.populateImage}`,
+        "populate[categories][fields][0]": `${filters.populateAll}`,
+      }),
+    {
+      next: {
+        revalidate: 3600,
+      },
+    }
+  ).then((res) => res.json());
   return postData;
 };

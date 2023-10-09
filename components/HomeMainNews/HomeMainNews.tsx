@@ -4,19 +4,27 @@ import MiddleNews from "../MiddleNews/MiddleNews";
 import SideNews from "../SideNews/SideNews";
 
 interface Props {
+  mainPost: Posts;
   posts: Posts;
+  politicsPosts: Posts;
+  actualityPosts: Posts;
 }
 
-const HomeMainNews = ({ posts }: Props) => {
+const HomeMainNews = ({
+  mainPost,
+  posts,
+  politicsPosts,
+  actualityPosts,
+}: Props) => {
   return (
     <div className="home-main-news">
       <div className="home-main-news__container flex gap-10">
-        <SideNews />
+        <SideNews posts={actualityPosts} />
         <div className="center-news w-1/2">
-          <MainNew posts={posts} />
-          <MiddleNews />
+          <MainNew mainPost={mainPost} />
+          <MiddleNews posts={politicsPosts} />
         </div>
-        <SideNews />
+        <SideNews posts={politicsPosts} />
       </div>
     </div>
   );

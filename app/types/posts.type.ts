@@ -16,21 +16,21 @@ interface Pagination {
 
 export interface Post {
   id: number;
-  attributes: Attributes;
+  attributes: PostAttributes;
 }
 
-interface Attributes {
-  Titulo: string;
-  Descripcion: string;
-  Fecha: string;
-  Autor: string;
-  Cuerpo: string;
-  Descargo: string;
+interface PostAttributes {
+  title: string;
+  description: string;
+  date: string;
+  author: string;
+  body: string;
+  discharges?: any;
+  slug: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-  Slug: string;
-  Imagen: Imagen;
+  image: Image;
   categories: Categories;
 }
 
@@ -40,10 +40,10 @@ interface Categories {
 
 interface CategoriesData {
   id: number;
-  attributes: CategoryAttributes;
+  attributes: CategoriesAttributes;
 }
 
-interface CategoryAttributes {
+interface CategoriesAttributes {
   title: string;
   slug: string;
   createdAt: string;
@@ -51,55 +51,15 @@ interface CategoryAttributes {
   publishedAt: string;
 }
 
-interface Imagen {
-  data: Datum[];
+interface Image {
+  data: ImageData[];
 }
 
-interface Datum {
+interface ImageData {
   id: number;
   attributes: Attributes;
 }
 
 interface Attributes {
-  name: string;
-  alternativeText?: any;
-  caption?: any;
-  width: number;
-  height: number;
-  formats: Formats;
-  hash: string;
-  ext: string;
-  mime: string;
-  size: number;
   url: string;
-  previewUrl?: any;
-  provider: string;
-  provider_metadata: Providermetadata;
-  createdAt: string;
-  updatedAt: string;
-}
-
-interface Formats {
-  large: Large;
-  small: Large;
-  medium: Large;
-  thumbnail: Large;
-}
-
-interface Large {
-  ext: string;
-  url: string;
-  hash: string;
-  mime: string;
-  name: string;
-  path?: any;
-  size: number;
-  width: number;
-  height: number;
-  provider_metadata: Providermetadata;
-}
-
-interface Providermetadata {
-  public_id: string;
-  resource_type: string;
 }

@@ -5,21 +5,36 @@ import Carousel from "@/components/Carousel/Carousel";
 import { capitalizeString } from "./utils";
 import NewCard from "@/components/NewCard/NewCard";
 import HomeMainNews from "@/components/HomeMainNews/HomeMainNews";
-import { getApiAllPosts } from "./api/posts/postsActions";
+import {
+  PostsCategories,
+  getApiAllPosts,
+  getApiMainPost,
+  getApiPostsByCategory,
+} from "./api/posts/postsActions";
 
 export const metadata = {
   title: "Conexión medios",
 };
 
+async function getByCategoryPosts(category: PostsCategories, pageSize: number) {
+  return getApiPostsByCategory(category, pageSize);
+}
+
 async function GetPosts() {
   return getApiAllPosts();
 }
 
+async function getMainPost() {
+  return getApiMainPost();
+}
+
 const Home = async () => {
   const posts = await GetPosts();
-  console.log("-----------------------");
-  console.log(posts);
-  console.log("-----------------------");
+  const mainPost = await getMainPost();
+  const politicsPosts = await getByCategoryPosts(PostsCategories.POLITICS, 4);
+  const actualityPosts = await getByCategoryPosts(PostsCategories.ACTUALITY, 4);
+
+  console.log("posts", politicsPosts);
 
   return (
     <>
@@ -27,7 +42,12 @@ const Home = async () => {
         <div className="home__container w-11/12 xl:w-10/12">
           {/* Carousel */}
           {/* <Carousel /> */}
-          <HomeMainNews posts={posts} />
+          <HomeMainNews
+            posts={posts}
+            politicsPosts={politicsPosts}
+            mainPost={mainPost}
+            actualityPosts={actualityPosts}
+          />
           {/* Hero */}
           {/* {heroNew && (
             <Link href={`/noticias/${heroNew.id}`}>
