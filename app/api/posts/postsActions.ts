@@ -7,6 +7,7 @@ const mainPostUrl = `${ApiBaseUrl}/main-posts`;
 export enum PostsCategories {
   POLITICS = "politica",
   ACTUALITY = "actualidad",
+  VIDEO = "video",
 }
 
 export type ApiPostsFilters = {
@@ -44,7 +45,8 @@ export const getApiAllPosts = async (
 // Get posts by category
 export const getApiPostsByCategory = async (
   category: string,
-  pageSize: number = 12
+  pageSize: number = 12,
+  notGetCategory?: string
 ) => {
   const postsData = await fetch(
     postsUrl +
@@ -53,6 +55,8 @@ export const getApiPostsByCategory = async (
         "populate[image][fields][0]": `${defaultPostsFilters.populateImage}`,
         "populate[categories][fields][0]": `${defaultPostsFilters.populateAll}`,
         "filters[categories][slug][$eq]": `${category}`,
+        "filters[categories][slug][$ne]": `${notGetCategory}`,
+        "filters[isMain][$null]": "true",
         "pagination[pageSize]": `${pageSize}`,
       })
   ).then((res) => res.json() as Promise<Posts>);
@@ -77,11 +81,13 @@ export const getApiMainPost = async (
   filters: ApiPostsFilters = defaultPostsFilters
 ) => {
   const postData = await fetch(
-    mainPostUrl +
+    postsUrl +
       "?" +
       new URLSearchParams({
         "populate[image][fields][0]": `${filters.populateImage}`,
         "populate[categories][fields][0]": `${filters.populateAll}`,
+        "filters[isMain][$null]": "false",
+        "pagination[pageSize]": "1",
       }),
     {
       next: {

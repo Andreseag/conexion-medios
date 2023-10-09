@@ -16,8 +16,12 @@ export const metadata = {
   title: "Conexión medios",
 };
 
-async function getByCategoryPosts(category: PostsCategories, pageSize: number) {
-  return getApiPostsByCategory(category, pageSize);
+async function getByCategoryPosts(
+  category: PostsCategories,
+  pageSize: number,
+  notGetCategory: string = ""
+) {
+  return getApiPostsByCategory(category, pageSize, notGetCategory);
 }
 
 async function GetPosts() {
@@ -31,8 +35,17 @@ async function getMainPost() {
 const Home = async () => {
   const posts = await GetPosts();
   const mainPost = await getMainPost();
-  const politicsPosts = await getByCategoryPosts(PostsCategories.POLITICS, 4);
-  const actualityPosts = await getByCategoryPosts(PostsCategories.ACTUALITY, 4);
+  const politicsPosts = await getByCategoryPosts(
+    PostsCategories.POLITICS,
+    4,
+    PostsCategories.VIDEO
+  );
+  const actualityPosts = await getByCategoryPosts(
+    PostsCategories.ACTUALITY,
+    4,
+    PostsCategories.VIDEO
+  );
+  const videoPosts = await getByCategoryPosts(PostsCategories.VIDEO, 5);
 
   console.log("posts", politicsPosts);
 
@@ -47,6 +60,7 @@ const Home = async () => {
             politicsPosts={politicsPosts}
             mainPost={mainPost}
             actualityPosts={actualityPosts}
+            videoPosts={videoPosts}
           />
           {/* Hero */}
           {/* {heroNew && (

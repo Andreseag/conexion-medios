@@ -1,5 +1,4 @@
 import { getApiPost } from "@/app/api/posts";
-import { Post } from "@/app/types/posts.type";
 import Image from "next/image";
 import ReactHtmlParser from "react-html-parser";
 
@@ -13,15 +12,13 @@ export default async function New({
   params: { idNoticia: string };
 }) {
   const post = await getNew(params.idNoticia);
-  console.log("--------------");
-  console.log(post);
 
   return (
     <div className="layout flex justify-center mt-20">
       <div className="layout__container w-11/12 md:w-3/4 lg:w-3/5 xl:w-2/5">
         {post.data && (
           <div className="new font-semibold ">
-            <h1 className="text-center text-3xl capitalize text-slate-800">
+            <h1 className="text-center text-3xl font-semibold capitalize text-slate-800">
               {post.data.attributes.title}
             </h1>
             <p className="text-lg mt-8 mb-3 font-normal text-slate-600">

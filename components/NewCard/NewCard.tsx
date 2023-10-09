@@ -1,41 +1,41 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
+// types
+import { Post } from "@/app/types/posts.type";
+
 interface Props {
-  newItem: {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-  };
+  post: Post;
+  className?: string;
 }
 
-const NewCard = ({ newItem }: Props) => {
+const NewCard = ({ post, className }: Props) => {
   return (
-    <Link href={`/noticias/${newItem.id}`}>
-      <div className="new-card w-full flex gap-1 md:gap-2">
-        <div className="new-card__content w-1/2">
-          <div className="new-card__title">
-            <h3 className="text-left capitalize md:text-xl text-lg font-semibold text-slate-800 mb-4">
-              {newItem.title}
-            </h3>
-            <p className="text-slate-600 hidden sm:block">
-              {newItem.description}
-            </p>
-          </div>
-        </div>
-        <div className="new-card__image w-1/2">
+    <div className={`new-card mb-12 ${className}`}>
+      <div className="new-card__container border-b border-slate-300 pb-12">
+        <Link href={`/noticias/${post.attributes.slug}`}>
           <Image
             alt="Imagen de la noticia"
-            src={newItem.image}
+            src={post.attributes?.image.data[0].attributes.url}
             width={1200}
             height={1200}
-            className="object-cover h-44 "
+            className="mb-3"
           />
-        </div>
+        </Link>
+        <Link
+          href={`/`}
+          className="mb-3 font-semibold text-red-500 hover:text-red-800 capitalize underline mt-2 py-3"
+        >
+          {post.attributes?.categories.data[0].attributes.title}
+        </Link>
+        <Link href={`/noticias/${post.attributes.slug}`}>
+          <h4 className="text-xl font-medium hover:text-slate-500">
+            {post.attributes?.title}
+          </h4>
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 };
 
