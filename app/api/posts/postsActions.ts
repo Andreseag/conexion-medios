@@ -36,7 +36,13 @@ export const getApiAllPosts = async (
       new URLSearchParams({
         "populate[image][fields][0]": `${filters.populateImage}`,
         "populate[categories][fields][0]": `${filters.populateAll}`,
-      })
+      }),
+    {
+      cache: "no-store",
+      // next: {
+      //   revalidate: 3600,
+      // },
+    }
   ).then((res) => res.json() as Promise<Posts>);
 
   return postsData;
@@ -58,7 +64,13 @@ export const getApiPostsByCategory = async (
         "filters[categories][slug][$ne]": `${notGetCategory}`,
         "filters[isMain][$null]": "true",
         "pagination[pageSize]": `${pageSize}`,
-      })
+      }),
+    {
+      cache: "no-store",
+      // next: {
+      //   revalidate: 3600,
+      // },
+    }
   ).then((res) => res.json() as Promise<Posts>);
 
   return postsData;
@@ -69,9 +81,10 @@ export const getApiPost = async (
   slug: string = defaultBlogPostFilters.slug
 ) => {
   const postData = await fetch(postsUrl + "/" + slug, {
-    next: {
-      revalidate: 3600,
-    },
+    cache: "no-store",
+    // next: {
+    //   revalidate: 3600,
+    // },
   }).then((res) => res.json());
   return postData;
 };
@@ -90,9 +103,10 @@ export const getApiMainPost = async (
         "pagination[pageSize]": "1",
       }),
     {
-      next: {
-        revalidate: 3600,
-      },
+      cache: "no-store",
+      // next: {
+      // revalidate: 3600,
+      // },
     }
   ).then((res) => res.json());
   return postData;

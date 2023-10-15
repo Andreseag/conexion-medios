@@ -10,11 +10,13 @@ interface Props {
 const SideNews = ({ posts }: Props) => {
   return (
     <div className="side-news w-1/4">
-      <div className="side-news__container">
-        {posts.data.map((post, i) => (
-          <NewCard key={i} post={post} />
-        ))}
-      </div>
+      {posts.data && (
+        <div className="side-news__container">
+          {posts.data.map((post, i) => (
+            <NewCard key={i} post={post} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

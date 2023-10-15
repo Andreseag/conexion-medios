@@ -9,7 +9,7 @@ interface Props {
 const MainNew = ({ mainPost }: Props) => {
   return (
     <>
-      {mainPost && (
+      {mainPost.data && (
         <div className="main-new">
           <div className="main-new__container flex flex-col items-center">
             <Link href={`/noticias/${mainPost?.data[0].attributes.slug}`}>
