@@ -1,8 +1,8 @@
 import Image from "next/image";
-import newsData from "@/app/data/news.data";
+import newsData from "@/data/news.data";
 import Link from "next/link";
 import Carousel from "@/components/Carousel/Carousel";
-import { capitalizeString } from "./utils";
+import { capitalizeString } from "../utils";
 import NewCard from "@/components/NewCard/NewCard";
 import HomeMainNews from "@/components/HomeMainNews/HomeMainNews";
 import {
@@ -10,7 +10,7 @@ import {
   getApiAllPosts,
   getApiMainPost,
   getApiPostsByCategory,
-} from "./api/posts/postsActions";
+} from "./../api/posts/postsActions";
 
 export const metadata = {
   title: "Conexión medios",

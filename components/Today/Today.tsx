@@ -5,7 +5,7 @@ const formatDate: string = "PPPP";
 
 const Today = () => {
   return (
-    <div className="today absolute left-0 top-2/4">
+    <div className="today absolute hidden md:block left-0 top-2/4">
       <div className="today__container text-xs text-slate-500 capitalize">
         {format(new Date(), formatDate, { locale: es })}
       </div>

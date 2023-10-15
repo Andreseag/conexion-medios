@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // types
-import { Post } from "@/app/types/posts.type";
+import { Post } from "@/types/posts.type";
 
 interface Props {
   post: Post;

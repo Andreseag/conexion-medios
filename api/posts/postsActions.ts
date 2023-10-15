@@ -1,4 +1,4 @@
-import { Posts } from "@/app/types/posts.type";
+import { Posts } from "@/types/posts.type";
 
 const ApiBaseUrl = process.env.API_URL;
 const postsUrl = `${ApiBaseUrl}/noticas`;

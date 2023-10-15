@@ -1,6 +1,8 @@
-import { Posts } from "@/app/types/posts.type";
 import Image from "next/image";
 import Link from "next/link";
+
+// Types
+import { Posts } from "@/types/posts.type";
 
 interface Props {
   mainPost: Posts;

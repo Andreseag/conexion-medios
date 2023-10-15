@@ -5,7 +5,7 @@ import Image from "next/image";
 import NewCard from "../NewCard/NewCard";
 
 // Types
-import { Posts } from "@/app/types/posts.type";
+import { Posts } from "@/types/posts.type";
 
 interface Props {
   videoPosts: Posts;

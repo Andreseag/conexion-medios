@@ -1,12 +1,11 @@
-import Image from "next/image";
-
-import { Posts } from "@/app/types/posts.type";
+// Components
 import MainNew from "../MainNew/MainNew";
 import MiddleNews from "../MiddleNews/MiddleNews";
 import SideNews from "../SideNews/SideNews";
-import Link from "next/link";
-import NewCard from "../NewCard/NewCard";
 import CategoryPostsBlock from "../CategoryPostsBlock/CategoryPostsBlock";
+
+// Types
+import { Posts } from "@/types/posts.type";
 
 interface Props {
   mainPost: Posts;

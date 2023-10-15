@@ -1,7 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Posts } from "@/app/types/posts.type";
 import NewCard from "../NewCard/NewCard";
+
+// Types
+import { Posts } from "@/types/posts.type";
 
 interface Props {
   posts: Posts;
