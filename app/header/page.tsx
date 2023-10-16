@@ -24,7 +24,10 @@ function Header() {
         <div className="wrapper w-11/12 xl:w-10/12">
           <div className="relative w-full flex justify-center items-center">
             <Today />
-            <button className=" md:hidden absolute left-0" onClick={toggleMenu}>
+            <button
+              className="header__show-menu md:hidden absolute left-0"
+              onClick={toggleMenu}
+            >
               <MaterialSymbol icon="menu" fill />
             </button>
 
