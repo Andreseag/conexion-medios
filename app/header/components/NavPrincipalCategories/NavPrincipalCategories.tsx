@@ -30,7 +30,7 @@ const categoriesData = [
 
 const NavPrincipalCategories = () => {
   return (
-    <div className="nav-principal-categories w-full flex justify-center mb-2 border-b border-slate-300 py-2">
+    <div className="nav-principal-categories w-full hidden md:flex justify-center mb-2 border-b border-slate-300 py-2">
       <div className="nav-principal-categories__container">
         <nav>
           <ul className="flex gap-3">

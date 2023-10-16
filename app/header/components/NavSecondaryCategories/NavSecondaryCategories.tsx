@@ -37,7 +37,7 @@ const categoriesData = [
 
 const NavSecondaryCategories = () => {
   return (
-    <div className="nav-secondaries-categories flex justify-center mb-2">
+    <div className="nav-secondaries-categories hidden md:flex justify-center mb-2">
       <div className="nav-secondaries-categories__container">
         <nav>
           <ul className="flex gap-4">

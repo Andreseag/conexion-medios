@@ -20,6 +20,9 @@
   src: url("./../public/fonts/Lora/static/Lora-SemiBold.ttf") format("opentype");
 }
 
+/* Google Symbols */
+@import 'material-symbols';
+
 @layer base {
   html {
     /* font-family: galderglynn, system-ui, sans-serif; */
