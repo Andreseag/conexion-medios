@@ -1,4 +1,4 @@
-import { getApiPost } from "@/app/api/posts";
+import { getApiPost } from "@/api/posts";
 import Image from "next/image";
 import ReactHtmlParser from "react-html-parser";
 
